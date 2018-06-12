@@ -4,6 +4,8 @@ const express=require('express');
 //create an app
 var app= express();
 
+const port=process.env.PORT || 3000;
+
 //Templating engine : templating engine let us render HTML but do it in a dynamic way 
 //where you can inject values like a user name or the current date inside of the template.
 //handlebars is a view engine for node js other eg are ejs and pug
@@ -82,7 +84,7 @@ app.get('/bad',(request,response)=>{
 
 //app.listen is going to bind the application to a port on our machine, we can then listen to requests
 //2nd argument is optional and takes a function that runs once the server has started
-app.listen(3000,()=>{
-    console.log('server running on port 3000');
+app.listen(port,()=>{
+    console.log(`server running on port ${port}`);
 });
  
