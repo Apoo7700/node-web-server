@@ -42,12 +42,12 @@ app.use((request,response,next)=>{
     next();
 });
 //the below code will run and stop othe pages from rendering when we are in maintenance mode
-app.use((request,response,next)=>{
-    response.render('maintenance.hbs',{
-        pageTitle:'Sorry we are down for maintenance',
-        message:'we will be back soon !'
-    });
-});
+// app.use((request,response,next)=>{
+//     response.render('maintenance.hbs',{
+//         pageTitle:'Sorry we are down for maintenance',
+//         message:'we will be back soon !'
+//     });
+// });
 
 //express.static takes as an input the path we want the user to view
 app.use(express.static(__dirname+'/public'));
